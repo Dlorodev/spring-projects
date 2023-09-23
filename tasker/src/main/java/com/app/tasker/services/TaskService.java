@@ -2,26 +2,23 @@ package com.app.tasker.services;
 
 import com.app.tasker.entities.Task;
 import com.app.tasker.entities.TaskList;
-
+import com.app.tasker.repositories.TaskRepository;
+import org.springframework.stereotype.Service;
 import java.time.LocalDate;
+import java.util.List;
 
+@Service
 public class TaskService {
 
-    Task task1;
-    Task task2;
-    TaskList purposes;
+    private TaskRepository repository;
 
     //Metodo constructor
-    public TaskService(){
-        this.task1 = new Task("Aprender Java", false, LocalDate.of(2023,9,28));
-        this.task2 = new Task("Aprender SpringBoot", false, LocalDate.of(2023,10,10));
-        this.purposes = new TaskList("Propositos del 2023");
-        purposes.addTask(task1);
-        purposes.addTask(task2);
+    public TaskService(TaskRepository repository){
+        this.repository = repository;
     }
 
     //Getter
-    public TaskList getTaskList(){
-        return this.purposes;
+    public List<Task> getTaskList(){
+        return this.repository.findAll();
     }
 }

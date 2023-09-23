@@ -5,20 +5,20 @@ import com.app.tasker.entities.TaskList;
 import com.app.tasker.services.TaskService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 public class TaskController {
 
     TaskService service;
 
-    public TaskController(){
-        this.service = new TaskService();
+    public TaskController(TaskService service){
+        this.service = service;
     }
 
     @GetMapping("/tasks")
-    public TaskList taskList() {
+    public List<Task> taskList() {
         return this.service.getTaskList();
     }
 
