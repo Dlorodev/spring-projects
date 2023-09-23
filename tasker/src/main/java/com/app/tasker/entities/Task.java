@@ -1,11 +1,20 @@
 package com.app.tasker.entities;
 
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "task")
 public class Task {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "description")
     private String description;
+    @Column(name = "isDone")
     private boolean isDone;
+    @Column(name = "dueDate")
     private LocalDate dueDate;
 
     //Metodos constructores (vacio y con atributos)
