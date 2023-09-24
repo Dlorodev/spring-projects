@@ -41,12 +41,13 @@ public class Task {
     }
 
     //Setters
-    public void setDescription(String description){
-        description = this.description;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setDone(boolean isDone) {
-        isDone = this.isDone;
+    public void setDone(boolean done) {
+        isDone = done;
     }
 
     public void setDueDate(LocalDate dueDate) {
