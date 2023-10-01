@@ -1,3 +1,7 @@
 * {
-font-family: sans-serif
+font-family: 'Lato', sans-serif;
+}
+
+body {
+background-color: red;
 }

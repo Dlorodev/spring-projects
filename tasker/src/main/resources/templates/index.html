@@ -2,24 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet" />
-    <title>TaskerApp</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Tasker app</title>
 </head>
 <body>
 
 <main>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/tasker-logo.png" width="150px"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ACERCA DE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACTO</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-secondary me-2" type="submit">REGISTRO</a>
+                        <a class="btn btn-outline-secondary" type="submit">ENTRAR</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
     <div class="px-4 py-5 my-5 text-center">
         <img src="img/task-list.png" height="100" class="d-block mx-auto mb-4" alt="icono-tareas" />
         <h1 class="display-5 fw-bold">Tasker app</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Organiza tus tareas en este sistema de gestion de tareas, asi nunca olvidaras lo que debes hacer
-            y estaras mas cerca de cumplir tus objetivos.</p>
-            <a href="/tasks" type="button" class="btn btn-dark btn-lg px-4 gap-3">Abrir app</a>
-            <button type="button" class="btn btn-secondary btn-lg px-4">Saber mas</button>
+            <p class="lead mb-4">Task Manager es una aplicación web que funciona en cualquier dispositivo y navegador,
+                sin necesidad de descargar ni instalar nada. Solo tienes que registrarte con tu correo
+                electrónico y contraseña, y empezar a crear tus listas de tareas. Además, Task Manager es
+                una aplicación gratuita, sin anuncios ni limitaciones.</p>
+            <a href="/tasks" type="button" class="btn btn-outline-dark btn-lg px-4 gap-3">Abrir app</a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Saber mas</button>
         </div>
     </div>
 </main>
