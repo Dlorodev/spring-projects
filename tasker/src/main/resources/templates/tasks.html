@@ -16,8 +16,8 @@
             <h1 class="display-5 fw-bold mb-4">Mis Tareas</h1>
             <a href="/tasks/new" class="btn btn-dark mb-4">Nueva Tarea</a>
         </div>
-        <div class="d-flex gap-4 justify-content-center">
-            <div th:each="task : ${tasks}" class="card" style="width: 18rem;">
+        <div class="d-flex flex-wrap gap-4 justify-content-center">
+            <div th:each="task : ${tasks}" class="card pt-2" style="width: 18rem;">
                 <div th:switch="${task.isDone}">
                     <img th:case="true" src="img/completo.png" class="card-img-top" alt="task-done-icon" style="width:56px" />
                     <img th:case="false" src="img/pendiente.png" class="card-img-top" alt="pending-task-icon" style="width:56px" />
